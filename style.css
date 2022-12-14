@@ -38,7 +38,7 @@ input {
   width: 70%;
   font-size: 1.5rem;
   align-self: center;
-  padding: 3.5% 3.5% 3.5% 0%;
+  padding: 0% 3.5% 3.5% 0%;
   border: none;
   text-align: left;
 }
@@ -73,12 +73,6 @@ button:hover {
   font-size: 2.3rem;
 }
 
-hr {
-  width: 20%;
-  height: 1px;
-  background-color: rgba(37, 102, 189, 1);
-}
-
 h1 {
   margin: 5%;
   font-size: 2.5rem;
@@ -97,4 +91,11 @@ h3 {
 
 .data {
   align-self: center;
+}
+
+small {
+  color: red;
+  font-size: large;
+  padding-left: 5%;
+  width: 80%;
 }
