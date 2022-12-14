@@ -14,10 +14,14 @@
  
     <div class="container">
         <div class="search-bar">
-            <input type="text" class="input" placeholder="Ingresa un lugar...">
+            <input type="text" class="input" name="city-input" placeholder="Ingresa un lugar...">
             <button name="search" id="search" type="submit" class="material-symbols-outlined">search</button>
         </div>
         <small id="error"></small>
+        <small>
+            <button type="submit" id="metric">Celsius</button>
+            <button type="submit" id="imperial">Farenheit</button>
+        </small>
         <div class="data">
             <h1 class="city">CITY</h1>
             <h2 class="temperature">0°</h2>

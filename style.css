@@ -8,8 +8,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 100vh;
+  max-height: 85vh;
   margin: 0%;
+  padding-top: 1.5%;
   background-color: rgba(46, 134, 193, 1);
 }
 
@@ -17,7 +18,7 @@ body {
   font-family: inherit;
   background-color: rgba(255, 255, 255, 1);
   width: 75%;
-  height: 75%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -47,8 +48,8 @@ input:focus {
   outline: none;
 }
 
-input::placeholder {
-  color: rgba(13, 83, 129, 0.7);
+#label-style {
+  justify-self: left;
 }
 
 button {
@@ -98,4 +99,11 @@ small {
   font-size: large;
   padding-left: 5%;
   width: 80%;
+}
+
+#metric,
+#imperial {
+  margin-right: 5%;
+  padding-left: 0%;
+  text-align: left;
 }
