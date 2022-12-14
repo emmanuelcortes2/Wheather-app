@@ -3,21 +3,29 @@ const weather = {
 
     fetchTemp: function (place) {
         fetch(
-        'https://api.openweathermap.org/data/2.5/weather?q='+ place +'&appid=' + this.apiKey
+        'https://api.openweathermap.org/data/2.5/weather?q='+ place +'&appid=' + this.apiKey +'&units=metric&lang=es'
         ).then((response) => response.json())
-        .then((data) => this.temperature(data))
+        .then((data) => this.currentWeather(data))
     },
 
-    temperature: function(data) {
-        const { temp } = data.main
-        const { name } = data
-        document.querySelector('.city').innerText = name
-        document.querySelector(".temperature").innerText = temp + ' °F'
+    currentWeather: function(data) {
+			const { temp } = data.main
+			const { name } = data
+			const { feels_like } = data.main
+			const { humidity } = data.main
+			const { temp_min } = data.main
+			const { temp_max } = data.main
+			const { pressure } = data.main
+			const { description } = data.weather[0]
+			document.querySelector('.city').innerText = name
+			document.querySelector(".temperature").innerText = Math.round(temp) + ' °C'
+			document.querySelector('#condt').innerText = ' ' +  description[0].toUpperCase() + description.substring(1)
+			document.querySelector('#feels_like').innerText = ' ' + Math.round(feels_like) + ' °C'
+			document.querySelector('#humidity').innerText = ' ' + humidity +' %'
+			document.querySelector('#min').innerText = ' ' + Math.round(temp_min) + ' °C'
+			document.querySelector('#max').innerText = ' ' + Math.round(temp_max) + ' °C'
+			document.querySelector('#press').innerText = ' ' + pressure
     },
-
-    celsius: function() {
-        console.log((this.temp - 32) / (1.8)) 
-    }
 }
 
 weather.fetchTemp('Mexico')

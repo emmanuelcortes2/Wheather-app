@@ -34,11 +34,11 @@ body {
 
 input {
   color: rgba(33, 97, 140, 1);
-  margin: 5%;
+  margin: 5% 5% 0% 5%;
   width: 70%;
   font-size: 1.5rem;
   align-self: center;
-  padding: 3.5%;
+  padding: 3.5% 3.5% 3.5% 0%;
   border: none;
   text-align: left;
 }
@@ -80,7 +80,6 @@ hr {
 }
 
 h1 {
-  padding-top: 5%;
   margin: 5%;
   font-size: 2.5rem;
   color:  rgba(37, 102, 189, 1);
@@ -92,3 +91,10 @@ h2 {
   color:  rgba(37, 102, 189, 1);
 }
 
+h3 {
+  margin-left: 3%;
+}
+
+.data {
+  align-self: center;
+}
